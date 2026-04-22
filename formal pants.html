@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Classic Formal Pants</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#050505;
+  color:#fff;
+  font-family:Arial, sans-serif;
+  min-height:180vh;
+}
+
+/* Main Section */
+.collection{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:70px 20px 40px;
+}
+
+/* Slider */
+.slider{
+  width:100%;
+  max-width:1250px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:24px;
+}
+
+/* Slide Card */
+.slide{
+  display:none;
+  width:100%;
+  max-width:900px;
+  background:linear-gradient(145deg,#0d0d0d,#141414);
+  border:1px solid #222;
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:
+    0 0 28px rgba(255,215,0,0.06),
+    inset 0 0 20px rgba(255,255,255,0.015);
+}
+
+.slide.active{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+
+/* Image */
+.slide img{
+  width:100%;
+  height:100%;
+  min-height:640px;
+  object-fit:cover;
+}
+
+/* Content */
+.content{
+  padding:48px 38px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.brand{
+  color:#ffd700;
+  font-size:13px;
+  letter-spacing:4px;
+  margin-bottom:14px;
+}
+
+.content h2{
+  font-size:44px;
+  margin-bottom:16px;
+}
+
+.desc{
+  color:#b7b7b7;
+  line-height:1.8;
+  margin-bottom:28px;
+}
+
+/* Details */
+.details{
+  display:grid;
+  gap:14px;
+}
+
+.detail-box{
+  background:#151515;
+  border:1px solid #262626;
+  border-radius:16px;
+  padding:16px 18px;
+}
+
+.label{
+  color:#777;
+  font-size:13px;
+  margin-bottom:5px;
+}
+
+.value{
+  color:#fff;
+  font-size:16px;
+}
+
+/* Arrows */
+.arrow{
+  width:60px;
+  height:60px;
+  border:none;
+  border-radius:50%;
+  background:linear-gradient(145deg,#111,#1a1a1a);
+  color:#ffd700;
+  font-size:28px;
+  cursor:pointer;
+  box-shadow:0 0 18px rgba(255,215,0,0.14);
+  transition:0.3s;
+}
+
+.arrow:hover{
+  transform:scale(1.08);
+  background:linear-gradient(145deg,#1a1a1a,#242424);
+}
+
+/* Home Button */
+.home-btn{
+  position:fixed;
+  top:28px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:14px 44px;
+  min-width:220px;
+  text-align:center;
+  text-decoration:none;
+  color:#ffd700;
+  font-size:15px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  background:linear-gradient(145deg,#111,#1a1a1a);
+  border:1px solid rgba(255,215,0,0.28);
+  border-radius:40px;
+  box-shadow:
+    0 0 18px rgba(255,215,0,0.12),
+    inset 0 0 8px rgba(255,215,0,0.05);
+  transition:0.35s;
+  z-index:999;
+}
+
+.home-btn:hover{
+  transform:translateX(-50%) translateY(-3px);
+  box-shadow:
+    0 0 28px rgba(255,215,0,0.22),
+    inset 0 0 10px rgba(255,215,0,0.08);
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  color:#777;
+  padding:40px 20px;
+}
+
+/* Mobile */
+@media(max-width:900px){
+
+.slide.active{
+  grid-template-columns:1fr;
+}
+
+.slide img{
+  min-height:430px;
+}
+
+.content h2{
+  font-size:34px;
+}
+
+.slider{
+  gap:10px;
+}
+
+.arrow{
+  width:48px;
+  height:48px;
+  font-size:24px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="home-btn">Home</a>
+
+<section class="collection">
+
+<div class="slider">
+
+<button class="arrow" onclick="prevSlide()">&#10094;</button>
+
+<!-- Slide 1 -->
+<div class="slide active">
+  <img src="fp1.jpg" alt="">
+  <div class="content">
+    <div class="brand">BEST CLASSIC</div>
+    <h2>Executive Black Trousers</h2>
+    <p class="desc">
+      Sharp tailored formal pants built for confidence, elegance and boardroom presence.
+    </p>
+
+    <div class="details">
+      <div class="detail-box">
+        <div class="label">Fabric</div>
+        <div class="value">Premium Stretch Blend</div>
+      </div>
+
+      <div class="detail-box">
+        <div class="label">Fit</div>
+        <div class="value">Slim Formal Fit</div>
+      </div>
+
+      <div class="detail-box">
+        <div class="label">Price</div>
+        <div class="value">₹2,899</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 2 -->
+<div class="slide">
+  <img src="fp3.jpg" alt="">
+  <div class="content">
+    <div class="brand">BEST CLASSIC</div>
+    <h2>Classic Charcoal Pants</h2>
+    <p class="desc">
+      Refined charcoal finish with timeless styling for modern professionals.
+    </p>
+
+    <div class="details">
+      <div class="detail-box">
+        <div class="label">Fabric</div>
+        <div class="value">Wool Blend</div>
+      </div>
+
+      <div class="detail-box">
+        <div class="label">Fit</div>
+        <div class="value">Tailored Straight Fit</div>
+      </div>
+
+      <div class="detail-box">
+        <div class="label">Price</div>
+        <div class="value">₹3,199</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 3 -->
+<div class="slide">
+  <img src="fp4.jpg" alt="">
+  <div class="content">
+    <div class="brand">BEST CLASSIC</div>
+    <h2>Royal Navy Formal Pants</h2>
+    <p class="desc">
+      Deep navy luxury trousers crafted for evening sophistication and style.
+    </p>
+
+    <div class="details">
+      <div class="detail-box">
+        <div class="label">Fabric</div>
+        <div class="value">Italian Blend</div>
+      </div>
+
+      <div class="detail-box">
+        <div class="label">Fit</div>
+        <div class="value">Modern Comfort Fit</div>
+      </div>
+
+      <div class="detail-box">
+        <div class="label">Price</div>
+        <div class="value">₹3,499</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<button class="arrow" onclick="nextSlide()">&#10095;</button>
+
+</div>
+</section>
+
+<footer>
+© 2026 Best Classic. All Rights Reserved.
+</footer>
+
+<script>
+let current = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index){
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[index].classList.add("active");
+}
+
+function nextSlide(){
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}
+
+function prevSlide(){
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Classic</title>
+<link rel="icon" href="logo.jpeg">
+</head>
+<div class="thread-area">
+  <div class="thread" id="thread"></div>
+</div>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#000;
+  color:#fff;
+  font-family:Arial, sans-serif;
+  transition:background 0.8s ease, box-shadow 0.8s ease;
+}
+
+body.gold-mode{
+  background:
+  radial-gradient(circle at top center,
+  rgba(255,215,0,0.10) 0%,
+  rgba(255,215,0,0.04) 22%,
+  rgba(0,0,0,1) 70%);
+
+  box-shadow:
+  inset 0 0 180px rgba(255,215,0,0.05);
+}
+
+/* Header */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  padding:25px;
+  border-bottom:1px solid #222;
+}
+
+header img{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+header h1,h3{
+  font-size:32px;
+  letter-spacing:10px;
+}
+
+/* Hero */
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h2{
+  font-size:70px;
+  margin-bottom:20px;
+  animation:fadeUp 1.5s ease;
+}
+
+.hero p{
+  color:#aaa;
+  font-size:22px;
+  animation:fadeUp 2s ease;
+}
+
+/* Featured */
+.featured{
+  padding:80px 40px;
+}
+
+.featured h2{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:50px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.item{
+  overflow:hidden;
+  border-radius:5px;
+}
+
+.item img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  transition:0.5s;
+}
+
+.item img:hover{
+  transform:scale(1.08);
+  filter:brightness(1.1);
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:40px;
+  color:#777;
+  border-top:1px solid #222;
+}
+
+/* Animation */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+.hero h2{
+  font-size:42px;
+}
+
+.hero p{
+  font-size:18px;
+}
+
+header h1{
+  font-size:24px;
+}
+
+}
+/* Thread position */
+.thread-area{
+  position:fixed;
+  top:0;
+  right:60px;
+  z-index:999;
+}
+
+.thread{
+  width:10px;
+  height:190px;
+  background:linear-gradient(to bottom,#555,#ddd);
+  cursor:pointer;
+  position:relative;
+  transition:0.3s;
+}
+.about-shop{
+  padding:90px 40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+  background:#050505;
+}
+
+.about-box{
+  background:linear-gradient(145deg,#0f0f0f,#171717);
+  border:1px solid #222;
+  border-radius:24px;
+  padding:35px;
+  box-shadow:0 0 18px rgba(255,215,0,0.05);
+}
+
+.about-box h2{
+  color:#ffd700;
+  margin-bottom:18px;
+  letter-spacing:2px;
+}
+
+.about-box p{
+  color:#cfcfcf;
+  line-height:1.8;
+  margin-bottom:10px;
+}
+
+@media(max-width:768px){
+  .about-shop{
+    padding:60px 20px;
+  }
+}
+
+.thread::after{
+  content:"";
+  position:absolute;
+  bottom:-14px;
+  left:50%;
+  transform:translateX(-50%);
+  width:30px;
+  height:20px;
+  border-radius:500%;
+  background:#999;
+}
+
+/* Golden glow on brand */
+header.active h1{
+  color:#ffd700;
+  text-shadow:
+  0 0 10px #ffd700,
+  0 0 20px #ffd700,
+  0 0 40px #ffd700;
+}
+
+header.active img{
+  box-shadow:
+  0 0 10px #ffd700,
+  0 0 20px #ffd700;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.jpeg" alt="">
+  <h1>BEST CLASSIC</h1>
+</header>
+
+<section class="hero">
+  <h3><ul>We Belive In TANGIBILITY</ul></h3>
+  <h2>Luxury Men's Wear</h2>
+  <p>Modern elegance crafted for timeless style.</p>
+</section>
+
+<section class="featured">
+  <h2>Featured Collection</h2>
+
+  <div class="grid">
+
+<div class="item">
+  <h4>Linen Shirts</h4>
+  <a href="L_S.html">
+    <img src="linen.jpg" alt="">
+  </a>
+</div> 
+    
+        <div class="item">
+  <h4>Linen Pants</h4>
+  <a href="linen pants.html">
+    <img src="lp1.jfif" alt="">
+  </a>
+</div>
+
+    <div class="item">
+  <h4>Hoodeis</h4>
+  <a href="hoodies.html">
+    <img src="h1.jfif" alt="">
+  </a>
+</div>
+
+      <div class="item">
+  <h4>Korean Pants</h4>
+  <a href="korean pants.html">
+    <img src="kp1.jfif" alt="">
+  </a>
+</div>
+
+        <div class="item">
+  <h4>Formal Pants</h4>
+  <a href="formal pants.html">
+    <img src="fp2.jpg" alt="">
+  </a>
+</div>
+
+
+        <div class="item">
+  <h4>Formal Shirts</h4>
+  <a href="formal shirts.html">
+    <img src="fs1.jfif" alt="">
+  </a>
+</div>
+
+  </div>
+</section>
+<script>
+const thread = document.getElementById("thread");
+const header = document.querySelector("header");
+
+let pulled = false;
+
+thread.addEventListener("click", () => {
+
+  if(!pulled){
+
+    thread.style.transform = "translateY(45px)";
+    header.classList.add("active");
+    document.body.classList.add("gold-mode");
+
+    pulled = true;
+
+  }else{
+
+    thread.style.transform = "translateY(0px)";
+    header.classList.remove("active");
+    document.body.classList.remove("gold-mode");
+
+    pulled = false;
+  }
+
+});
+</script>
+<section class="about-shop">
+
+  <div class="about-box">
+    <h2>About Best Classic</h2>
+    <p>
+      Best Classic is built for men & women who value timeless style,
+      premium quality and modern confidence. We curate refined
+      fashion pieces that blend luxury with everyday wear.
+    </p>
+  </div>
+
+  <div class="about-box">
+    <h2>Shop Details</h2>
+    <p><strong>Location:</strong> SHIMOGA BUS STAND BACKSIDE
+      GOPALA MAIN ROAD MILGATTA CIRCLE India</p>
+    <p><strong>Hours:</strong> Mon - Sat | 10 AM - 8 PM</p>
+    <p><strong>Contact:</strong> +91 7349695687,
+    7349098858</p>
+    <p><strong>Email:</strong> bestclassic@email.com</p>
+  </div>
+
+</section>
+<footer>
+© 2026 Best Classic All Rights Reserved. Designed,DEVELOPED by M.W TEAM
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Classic Collection</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#000;
+  color:#fff;
+  font-family:Arial, sans-serif;
+}
+
+/* Main Section */
+.collection{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+}
+
+/* Slider Layout */
+.slider{
+  width:100%;
+  max-width:1200px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+}
+
+/* Slides */
+.slide{
+  display:none;
+  width:100%;
+  max-width:850px;
+  background:#0d0d0d;
+  border:1px solid #1f1f1f;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 0 25px rgba(255,215,0,0.08);
+}
+
+.slide.active{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+
+/* Image */
+.slide img{
+  width:100%;
+  height:100%;
+  min-height:620px;
+  object-fit:cover;
+}
+
+/* Content */
+.content{
+  padding:45px 35px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.brand{
+  color:#ffd700;
+  letter-spacing:3px;
+  font-size:14px;
+  margin-bottom:14px;
+}
+
+.content h2{
+  font-size:42px;
+  margin-bottom:18px;
+}
+
+.desc{
+  color:#b8b8b8;
+  line-height:1.7;
+  margin-bottom:30px;
+}
+
+/* Details */
+.details{
+  display:grid;
+  gap:14px;
+}
+
+.detail-box{
+  background:#151515;
+  border:1px solid #242424;
+  border-radius:14px;
+  padding:16px;
+}
+
+.label{
+  color:#777;
+  font-size:13px;
+  margin-bottom:5px;
+}
+
+.value{
+  color:#fff;
+  font-size:16px;
+}
+
+/* Arrow Buttons */
+.arrow{
+  width:58px;
+  height:58px;
+  border:none;
+  border-radius:50%;
+  background:#111;
+  color:#ffd700;
+  font-size:28px;
+  cursor:pointer;
+  box-shadow:0 0 18px rgba(255,215,0,0.15);
+  transition:0.3s;
+}
+
+.arrow:hover{
+  transform:scale(1.08);
+  background:#181818;
+}
+
+/* Mobile */
+@media(max-width:900px){
+
+  .slide.active{
+    grid-template-columns:1fr;
+  }
+
+  .slide img{
+    min-height:420px;
+  }
+
+  .content h2{
+    font-size:32px;
+  }
+
+  .slider{
+    gap:10px;
+  }
+
+  .arrow{
+    width:48px;
+    height:48px;
+    font-size:24px;
+  }
+
+}
+
+/* More page length */
+body{
+  min-height:108vh;
+}
+
+/* Luxury Home Button - Center Top */
+.home-btn{
+  position:fixed;
+  top:28px;
+  left:50%;
+  transform:translateX(-50%);
+
+  padding:14px 42px;
+  min-width:220px;
+
+  text-align:center;
+  text-decoration:none;
+  color:#ffd700;
+  font-size:15px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+
+  background:linear-gradient(145deg,#111,#1a1a1a);
+  border:1px solid rgba(255,215,0,0.28);
+  border-radius:40px;
+
+  box-shadow:
+    0 0 18px rgba(255,215,0,0.12),
+    inset 0 0 8px rgba(255,215,0,0.05);
+
+  transition:all 0.35s ease;
+  z-index:999;
+}
+
+.home-btn:hover{
+  transform:translateX(-50%) translateY(-3px);
+
+  box-shadow:
+    0 0 28px rgba(255,215,0,0.25),
+    inset 0 0 10px rgba(255,215,0,0.08);
+
+  background:linear-gradient(145deg,#171717,#222);
+}
+ 
+
+
+</style>
+</head>
+
+<body>
+
+<section class="collection">
+
+  <div class="slider">
+
+    <button class="arrow" onclick="prevSlide()">&#10094;</button>
+
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <img src="linen shirt 2.jpg" alt="">
+      <div class="content">
+        <div class="brand">BEST CLASSIC</div>
+        <h2>Royal White Shirt</h2>
+        <p class="desc">
+          Premium black shirt crafted for bold elegance and modern confidence.
+        </p>
+
+        <div class="details">
+          <div class="detail-box">
+            <div class="label">Fabric</div>
+            <div class="value">Egyptian Cotton</div>
+          </div>
+
+          <div class="detail-box">
+            <div class="label">Fit</div>
+            <div class="value">Slim Luxury Fit</div>
+          </div>
+
+          <div class="detail-box">
+            <div class="label">Price</div>
+            <div class="value">₹2,499</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <img src="linen shirt 3.jpg" alt="">
+      <div class="content">
+        <div class="brand">BEST CLASSIC</div>
+        <h2>Classic Gray Shirt</h2>
+        <p class="desc">
+          Clean timeless design with a refined premium finish.
+        </p>
+
+        <div class="details">
+          <div class="detail-box">
+            <div class="label">Fabric</div>
+            <div class="value">Pure Cotton</div>
+          </div>
+
+          <div class="detail-box">
+            <div class="label">Fit</div>
+            <div class="value">Tailored Fit</div>
+          </div>
+
+          <div class="detail-box">
+            <div class="label">Price</div>
+            <div class="value">₹2,299</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <img src="linen shirt 4.jpg" alt="">
+      <div class="content">
+        <div class="brand">BEST CLASSIC</div>
+        <h2>Skyblue Blue Shirt</h2>
+        <p class="desc">
+          A sharp statement piece built for evening class and style.
+        </p>
+
+        <div class="details">
+          <div class="detail-box">
+            <div class="label">Fabric</div>
+            <div class="value">Linen Blend</div>
+          </div>
+
+          <div class="detail-box">
+            <div class="label">Fit</div>
+            <div class="value">Modern Comfort Fit</div>
+          </div>
+
+          <div class="detail-box">
+            <div class="label">Price</div>
+            <div class="value">₹2,699</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="arrow" onclick="nextSlide()">&#10095;</button>
+
+  </div>
+  
+
+</section>
+<a href="index.html" class="home-btn">Home</a>
+<footer>
+   © 2026 Best Classic. All Rights Reserved.
+</footer>
+<script>
+let current = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index){
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[index].classList.add("active");
+}
+
+function nextSlide(){
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}
+
+function prevSlide(){
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+}
+</script>
+
+
+
+</body>
+</html>
